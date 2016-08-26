@@ -191,7 +191,7 @@ public class Principal2 extends javax.swing.JFrame {
     }//GEN-LAST:event_cmdAutomaticoActionPerformed
 
     private void cmdMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdMostrarActionPerformed
-    int contp=0,contimp=0,cont=0,contpri=0,num;    
+    int contp=0,contimp=0,cont=0,contpr=0,num;    
     for (int i = 0; i < v.length; i++) {
           
     if(v[i]==0){}
@@ -200,13 +200,19 @@ public class Principal2 extends javax.swing.JFrame {
     }
     else {
     contimp++;
-    } 
     }
-      
+    
+    }
+        for (int i = 0; i <v.length; i++) {
+        if(v[i]%v[i]==0 && v[i]%2!=0){
+        contpr++;    
+        }    
+        }
+  
     
     
     
-    txtResultado.setText("El Total de numeros impares es: "+contimp+"\n"+"El Total de numeros pares es: "+contp);
+    txtResultado.setText("El Total de numeros impares es: "+contimp+"\n"+"El Total de numeros pares es: "+contp+"\n"+"El Total de Numeros Primos es :"+contpr);
         
     }//GEN-LAST:event_cmdMostrarActionPerformed
 
